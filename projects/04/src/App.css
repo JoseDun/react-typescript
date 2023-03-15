@@ -1,0 +1,25 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	flex-wrap: wrap;
+	padding-bottom: 24px;
+}
+
+p {
+	width: 25%;
+}
+
+img {
+	width: 400px;
+	height: 400px;
+	object-fit: contain;
+}
