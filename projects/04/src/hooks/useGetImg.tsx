@@ -8,11 +8,9 @@ export const useGetImg = ({ fact }: { fact: string }) => {
 	useEffect(() => {
 		if (!fact) return;
 
-		const factQuery = fact?.split(' ', 3)?.join('');
+		const factQuery = fact?.split(' ', 3)?.join(' ');
 
-		fetch(
-			`https://cataas.com/cat/says/${factQuery}?size=50&color=red&json=true`,
-		)
+		fetch(`https://cataas.com/cat/says/${factQuery}?&json=true`)
 			.then((res) => res.json())
 			.then(({ url }) => setImgCat(url));
 	}, [fact]);
